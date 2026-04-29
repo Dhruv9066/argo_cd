@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: clean_up
+  name: cleanup
   namespace: default
   annotations:
     argocd.argoproj.io/hook: PostSync
@@ -10,11 +10,11 @@ spec:
   replicas: 4
   selector:
     matchLabels:
-      app: clean_up
+      app: cleanup
   template:
     metadata:
       labels:
-        app: clean_up
+        app: cleanup
     spec:
       containers:
       - name: nginx
