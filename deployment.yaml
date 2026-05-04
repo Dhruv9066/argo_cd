@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: webserver
   namespace: default
 spec:
   replicas: 4
@@ -14,7 +14,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
+      - name: webserver
+        image: dhruv3020/webserver:v1
         ports:
         - containerPort: 80
