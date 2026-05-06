@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: webserver
-        image: dhruv3020/netflix-app:v1.13
+        image: dhruv3020/netflix-app:v1.1
         ports:
         - containerPort: 80
